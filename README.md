@@ -1,4 +1,4 @@
-# Options Market Sentiment Calculator
+# Options Sentiment Explorer
 
 Python tool that analyzes options market data to calculate sentiment scores for any ticker.
 
@@ -38,7 +38,7 @@ pip install yfinance pandas
    Enter the percent OTM (default 5): 2
    ```
 
-3. Get comprehensive sentiment analysis with validation guidance
+3. Get comprehensive sentiment analysis with validation check
 
 ## Example Output
 
@@ -133,23 +133,23 @@ The final sentiment score combines all metrics with weights:
 3. **Peer Comparison**: Check similar stocks or sector ETFs
 4. **Recent Events**: Look at earnings, news, or market events
 
-## Limitations & Considerations
+## Limitations
 
 - **Low Volume Warning**: Less reliable with <100 total volume
-- **Expiration Effects**: Weekly options may show different patterns than monthly
-- **Data Delays**: yfinance data may have slight delays
+- **Expiration Effects**: Weekly options may show different patterns than monthly. Later/higher options tend to have low liquidity
+- **Instutional Effects**: Sometimes institutional activity such as hedging or high frequency trading can skew the indicators
 
 ## Advanced Usage Tips
 
-### For Institutional Positioning
-- Look for unusual OI combined with low volume (existing large positions)
-- High volume with low OI suggests new institutional activity
+### Potential Institutional Positioning
+- High OI, low volume (existing large positions)
+- High volume, low OI could be new institutional activity
 
-### For Retail Sentiment
+### Retail Sentiment
 - Very high put/call ratios often indicate retail fear (contrarian signal)
 - Extreme OTM activity typically retail speculation
 
-### For Event Trading
+### Event Trading
 - IV skew expansion before earnings/events
 - Volume spikes in specific strikes may indicate informed trading
 
@@ -169,7 +169,7 @@ The final sentiment score combines all metrics with weights:
 - Check for recent news or events affecting the underlying
 
 ## Upcoming features
-- Possibly implementing additional options metrics (gamma, charm, etc.)
+- Possibly implementing additional options metrics (gamma, delta, etc.)
 - Adding a chart/GUI
 - Ability to stream real-time data
 
@@ -177,7 +177,8 @@ The final sentiment score combines all metrics with weights:
 Open source
 
 ## Credits
-Claude.ai, an AI coding assistant, was partially used in the creation of this program and README.
+Claude.ai, an AI coding assistant, was partially used in the creation of this repository.
+
 ---
 
 *Disclaimer: This tool is for educational and informational purposes only. Options trading involves substantial risk and is not suitable for all investors. Always conduct your own research and consider consulting with a financial advisor.*
