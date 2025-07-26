@@ -237,7 +237,7 @@ def impVol(c, p):
     }
 
 def volPattern(c, p):
-    """Analyze volume patterns"""
+    # Analyze volume patterns
     # Replace zero open interest with 1 to avoid division errors
     calls_clean = c.copy()
     puts_clean = p.copy()
